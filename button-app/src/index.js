@@ -12,7 +12,10 @@ const button3 = React.createElement("button",{"id":"me-gusta-3"}, "me gusta❤�
 const app = React.createElement(React.Fragment, null, [button, button2, button3]);
 root.render(app);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// With JSX
+<React.Fragment>
+    <button id="me-gusta-1">Me gusta❤️</button>
+    <button id="me-gusta-2">Me gusta❤️</button>
+    <button id="me-gusta-3">Me gusta❤️</button>
+</React.Fragment>
 reportWebVitals();
