@@ -2,12 +2,13 @@
 import './index.css';
 import { TwitterFollowCard } from './TwitterFollowCard';
 export function App (){
+    const format = (userName) => `@${userName}`;
     return(
         <div className='container-tw'>
-            <TwitterFollowCard userName="java" name="Java Lover" />
-            <TwitterFollowCard userName="john" name="John China" />
-            <TwitterFollowCard userName="f3lip3l" name="Felipe Lora" />
-            <TwitterFollowCard userName="deynox1" name= "Pablito" />
+            <TwitterFollowCard formatUserName={format} isFollowing userName="java" name="Java Lover" />
+            <TwitterFollowCard formatUserName={format} isFollowing userName="john" name="John China" />
+            <TwitterFollowCard formatUserName={format} isFollowing userName="f3lip3l" name="Felipe Lora" />
+            <TwitterFollowCard formatUserName={format} isFollowing={false} userName="deynox1" name= "Pablito" />
         </div>
     );
 }
