@@ -2,13 +2,24 @@
 import './index.css';
 import { TwitterFollowCard } from './TwitterFollowCard';
 export function App (){
-    const formatt = <span>@USERNAME</span>;
+    const unknown = {isFollowing: true} // Pasando objeto como props
     return(
         <div className='container-tw'>
-            <TwitterFollowCard formattedUserName={formatt} isFollowing userName="java" name="Java Lover" />
-            <TwitterFollowCard formattedUserName={formatt} isFollowing userName="john" name="John China" />
-            <TwitterFollowCard formattedUserName={formatt} isFollowing userName="f3lip3l" name="Felipe Lora" />
-            <TwitterFollowCard formattedUserName={formatt} isFollowing={false} userName="deynox1" name= "Pablito" />
+            <TwitterFollowCard  isFollowing userName="java" >
+                JavaLover777
+            </TwitterFollowCard>
+            <TwitterFollowCard  isFollowing userName="john">
+                John China
+            </TwitterFollowCard>
+            <TwitterFollowCard  isFollowing userName="f3lip3l">
+                Felipe Lora
+            </TwitterFollowCard>
+            <TwitterFollowCard  isFollowing={false} userName="deynox1">
+                Pablito
+            </TwitterFollowCard>
+            <TwitterFollowCard {...unknown}>
+                PCR-CODE-BEST
+            </TwitterFollowCard>
         </div>
     );
 }
