@@ -5,16 +5,16 @@ export function App (){
     const unknown = {isFollowing: true} // Pasando objeto como props
     return(
         <div className='container-tw'>
-            <TwitterFollowCard  isFollowing userName="java" >
+            <TwitterFollowCard userName="java" >
                 JavaLover777
             </TwitterFollowCard>
-            <TwitterFollowCard  isFollowing userName="john">
+            <TwitterFollowCard userName="john">
                 John China
             </TwitterFollowCard>
-            <TwitterFollowCard  isFollowing userName="f3lip3l">
+            <TwitterFollowCard userName="f3lip3l">
                 Felipe Lora
             </TwitterFollowCard>
-            <TwitterFollowCard  isFollowing={false} userName="deynox1">
+            <TwitterFollowCard userName="deynox1">
                 Pablito
             </TwitterFollowCard>
             <TwitterFollowCard {...unknown}>

@@ -1,7 +1,17 @@
-/* eslint-disable no-unused-vars */
+import { useState } from 'react';
 import './twitterFollowCard.css'
+
 // eslint-disable-next-line react/prop-types
-export function TwitterFollowCard ({userName = 'Unknown', children, isFollowing}){
+export function TwitterFollowCard ({userName = 'Unknown', children}){
+
+    const [isFollowing, setIsFollowing] = useState(false);
+
+    const handleClick = () => {
+        setIsFollowing(!isFollowing);
+    }
+
+    const textFollowing = isFollowing ? "Siguiendo" : "Seguir";
+    const buttonClassName = isFollowing ? "tw-followCard-button is-following" : "tw-followCard-button";
     return(
         <article className='tw-followCard'>
             <header className='tw-followCard-header'>
@@ -12,8 +22,8 @@ export function TwitterFollowCard ({userName = 'Unknown', children, isFollowing}
                 </div>
             </header>
             <aside>
-                <button className='tw-followCard-button'>
-                    Seguir
+                <button className={buttonClassName} onClick={handleClick}>
+                    {textFollowing}
                 </button>
             </aside>
         </article>
